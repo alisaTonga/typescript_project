@@ -1,6 +1,7 @@
 import './myButton.css'
 
 interface IMyButtonProps{
+    id?: number | string
     name?: string,
     type?: 'submit' | 'reset' | 'button' 
     onClick?: () => void

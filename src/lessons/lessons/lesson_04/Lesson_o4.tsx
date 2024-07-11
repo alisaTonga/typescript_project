@@ -4,7 +4,7 @@ import { forceUsers } from './data'
 
 export default function Lesson_04(){
     return(
-        <div className="lesson_container">
+        <div className="lesson-container">
             <h5 id='title'>Lesson 04 </h5>
             <div className='cards'> 
             {forceUsers.map((hero,index) => (

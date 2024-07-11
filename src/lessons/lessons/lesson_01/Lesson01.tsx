@@ -10,7 +10,12 @@ export default function Lesson01() {
   const heading = 'Урок 01';
   const classContainer = 'lesson1-container';
 
-  function formatName(user) {
+  interface IUser {
+    name: string
+    lastName: string
+  }
+
+  function formatName(user:IUser) {
     return `Имя: ${user.name}, фамилия: ${user.lastName} 🕵️`
   }
 

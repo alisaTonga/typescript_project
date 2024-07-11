@@ -3,7 +3,7 @@ import MyButton from "../../components/myButton/myButton";
 
 export default function Homework04(){
     return(
-        <div className="lesson_container">
+        <div className="lesson-container">
         <h1>Homework </h1>
         <MyButton />
         <MyButton name='click me!'/>

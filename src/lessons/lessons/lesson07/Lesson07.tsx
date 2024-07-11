@@ -1,5 +1,5 @@
-import Counter from "../../components/counter/Counter";
-import MyButton from "../../components/myButton/myButton";
+import Counter from "../../../components/counter/Counter";
+import MyButton from "../../../components/myButton/myButton";
 
 function Lesson07(){
 let hero:string = 'batman'

@@ -9,24 +9,24 @@ export default function LoginForm(){
         <form className="login-form">
             <h2>Login form</h2>
             <div id="inputs">
-                <label htmlFor="login">Login:
+                <label htmlFor="login">
                     <br />
                     <MyInput type={'Login'} placeholder={'username'} label={'Login: '} name={'login'}/>
                 </label>
 
-                <label htmlFor="email">Email:
+                <label htmlFor="email">
                     <br />
                     <MyInput type={'Email'} placeholder={'username@gmail.com'} label={'Email: '} name={'email'}/>
                 </label>
 
-                <label htmlFor="password"> Password:
+                <label htmlFor="password">
                     <br />
                     <MyInput type={'Password'} placeholder={'***************'} label={'Password: '} name={'password '}/>
                 </label>
 
             </div>
             <div id="buttons">
-            <MyButton id="cancel" type={'cancel'} name={'Cancel'} onClick={handleCancel}/>
+            <MyButton id="reset" type={'reset'} name={'Cancel'} onClick={handleCancel}/>
             <MyButton id="submit" type={'submit'} name={'Submit'} onClick={handleSubmit}/> 
             </div>
         </form>
