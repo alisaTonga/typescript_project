@@ -63,6 +63,7 @@ const sum = (a:number, b:number) =>{
     return(
         <div className="lesson-container">
             <h4>Lesson 06</h4>
+            <p>Everything about TS part 1</p>
 
         </div>
     )
