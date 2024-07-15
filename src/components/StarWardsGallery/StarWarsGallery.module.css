@@ -1,4 +1,7 @@
 .forceUsersGrid {
+    margin-top: 50px;
+    margin-left: 2%;
+    justify-content: space-around;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     width: 100%;

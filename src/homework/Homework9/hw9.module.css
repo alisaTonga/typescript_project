@@ -1,0 +1,18 @@
+h4{
+    color: black;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 63px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.photo{
+
+    border-radius: 15%;
+    width: 50%;
+    height: 50%;
+    border-style: groove;
+    margin: 20px;
+}
+.text{
+    font-size: 30px;
+}
