@@ -8,6 +8,7 @@ function Layout() {
         </header>
         <main className={styles.main}>
             <StarWarsGallery />
+            
         </main>
         <footer className={styles.footer}>
             footer
