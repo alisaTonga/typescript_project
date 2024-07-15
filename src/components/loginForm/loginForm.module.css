@@ -5,7 +5,8 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 50%;
+    margin-left: 40%;
+    margin-right: 40%;
     margin-top: 10px;
     }
 h2{

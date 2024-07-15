@@ -1,4 +1,11 @@
-export const forceUsers = [
+export interface IForceUser{
+    name: string
+        age: number
+        isDark: boolean
+        lightsaberColors: string[]
+        image: string
+}
+export const forceUsers: IForceUser[]= [
     {
         name: 'Luke Skywalker',
         age: 35,

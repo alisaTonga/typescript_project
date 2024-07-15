@@ -1,13 +1,12 @@
 import MyButton from "../myButton/myButton";
 import MyInput from "../MyInput/MyInput";
-import './loginForm.css'
+import styles from './loginForm.module.css'
 
 export default function LoginForm(){
     const handleCancel = () => {console.log("Ok that was canceled. See you next time");}
     const handleSubmit= () => {console.log("Ok that was submitted");}
     return(
-        <form className="login-form">
-            <h2>Login form</h2>
+        <form className={styles.loginForm}>
             <div id="inputs">
                 <label htmlFor="login">
                     <br />

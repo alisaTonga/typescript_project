@@ -1,0 +1,26 @@
+.page{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.header{
+    width: 100%;
+    background-color: orange;
+    height: 80px;
+    position: sticky;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer{
+    width: 100%;
+    background-color: lightgray;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    flex: 1;
+}

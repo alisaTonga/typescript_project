@@ -2,18 +2,18 @@ import { useState } from "react";
 import MyButton from "../myButton/myButton";
 
 export default function Feedback() {
-    const [like, setLike] = useState(5)
+    const [like, setLike] = useState<number>(5)
     const [dislike, setDislike] = useState(0)
 
-    const handleLike = () => {
+    const handleLike = ():void => {
         setLike(prev => prev + 1)
     }
 
-    const handleDisLike = () => {
+    const handleDisLike = ():void => {
         setDislike(prev => prev + 1)
     }
 
-    const handleReset = () => {
+    const handleReset = ():void => {
         setLike(0)
         setDislike(0)
     }

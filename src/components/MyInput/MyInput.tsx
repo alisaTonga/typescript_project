@@ -1,14 +1,15 @@
+import styles from './myIput.module.css'
 interface IMyInput {
-    type: string
+    type?: string
     placeholder?: string
-    label: string
-    name: string
+    label?: string
+    name?: string
 }
 
-export default function MyInput({type,placeholder,label,name}:IMyInput){
+export default function MyInput({type='text',placeholder='default',label ='default',name='input'}:IMyInput){
     return(
         <>
-        <label className={label}>{label} <br /></label>
+        <label className={styles.label}>{label} <br /></label>
         <input className="my_Input" type={type}  placeholder = {placeholder} name={name}/>
         </>
     )
