@@ -1,21 +1,22 @@
+import { forceUsers } from "../../lessons/lesson_04/data";
 import HeroCard from "../HeroCard/HeroCard";
-import {forceUsers} from '../../lessons/lessons/lesson_04/data'
 import styles from './StarWarsGallery.module.css'
 
 export default function StarWarsGallery(){
     return(
-        <div className="lesson-container">
-            <div className='cards'>
-            {forceUsers.map((hero, index) => (
-                <HeroCard key={index}
-                index={index}
-                name={hero.name}
-                isDark={hero.isDark}
-                age={hero.age}
-                lightsaberColors={hero.lightsaberColors}
-                image={hero.image}/>
-            ))}
+        <div className='lesson-container'> 
+        <div className={styles.forceUsersGrid}>
+            {forceUsers.map((hero, index)=>(
+                <HeroCard
+                key={index}
+                name={hero.name} 
+                image={hero.image} 
+                age={hero.age} 
+                isDark={hero.isDark} 
+                lightsaberColors={hero.lightsaberColors}/>
+            )
+            )}
             </div>
-        </div>
+            </div>
     )
 }

@@ -1,14 +1,13 @@
 import ReactDOM from 'react-dom/client';
 import './index.css';
-
-import StarWarsGallery from './components/StarWardsGallery/StarWarsGallery';
+import Layout from './components/layout/Layout';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <>
-  <StarWarsGallery />
+  <Layout />
   </>
 );
 

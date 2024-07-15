@@ -1,3 +1,4 @@
+import StarWarsGallery from '../StarWardsGallery/StarWarsGallery';
 import styles from './layout.module.css'
 function Layout() {
     return(
@@ -6,7 +7,7 @@ function Layout() {
             header
         </header>
         <main className={styles.main}>
-            main
+            <StarWarsGallery />
         </main>
         <footer className={styles.footer}>
             footer

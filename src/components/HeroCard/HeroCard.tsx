@@ -1,27 +1,24 @@
-import {IForceUser} from '../../lessons/lessons/lesson_04/data'
-import {forceUsers} from '../../lessons/lessons/lesson_04/data'
 import styles from './HeroCard.module.css'
 
-interface IHeroCardProps extends IForceUser{
-    index: number;
+interface IHeroCardProps {
+    name: string
+        age: number
+        isDark: boolean
+        lightsaberColors: string[]
+        image: string
 }
 
-const HeroCard = ({ index, name, isDark, age, lightsaberColors, image }: IHeroCardProps) => {
+const HeroCard = ({name, isDark, age, lightsaberColors, image}: IHeroCardProps) => {
         return(
-            <div className={styles.card}> 
-            {forceUsers.map((hero,index) => (
-                <div key={index} id='card' className={`card ${hero.isDark ? 'dark' : 'light'}`}>
-                    <h4>{hero.name}</h4>
-                    <h5>Age: {hero.age}</h5>
-                    <img id='photo' width={200} src={hero.image} alt="" />
+                <div  id={styles.card} className={`${isDark ? styles.dark: styles.light} ${styles.card}`}>
+                    <h4>{name}</h4>
+                    <h5>Age: {age}</h5>
+                    <img id='photo' width={200} src={image} alt="" />
                     <h5>Lightsaber colors: {' '}
-                        {hero.lightsaberColors.map(color => (
+                        {lightsaberColors?.map(color => (
                             <ol>{color}</ol>
                         ))}</h5>
-
                 </div>
-            ))}
-            </div>
     )
 }
 export default HeroCard;

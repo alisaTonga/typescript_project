@@ -1,6 +1,6 @@
-import Counter from "../../../components/counter/Counter";
-import LoginForm from "../../../components/loginForm/LoginForm";
-import MyButton from "../../../components/myButton/myButton";
+import Counter from "../../components/counter/Counter";
+import LoginForm from "../../components/loginForm/LoginForm";
+import MyButton from "../../components/myButton/myButton";
 
 
 export default function Lesson2(){

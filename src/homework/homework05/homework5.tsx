@@ -1,5 +1,5 @@
 import Card from "../../components/cards/card";
-import { forceUsers } from "../../lessons/lessons/lesson_04/data.js";
+import { forceUsers } from "../../lessons/lesson_04/data";
 
 export default function Homework5(){
     return (
