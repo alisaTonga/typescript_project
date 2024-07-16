@@ -14,12 +14,15 @@ export default function Lesson10(){
         fact: '' })
 
     const [catFacts, setFacts] = useState<ICatFact[]>([])
-
+    const [isLoading, setIsLoading] = useState(false);
 
     const fetchCatFacts = () => {
+        setIsLoading(true);
         fetch('https://catfact.ninja/fact')
             .then(res => res.json())
-            .then(data => setFacts(prev=>[...prev,data])) ;
+            .then(data => setFacts(prev=>[...prev,data]))
+            setIsLoading(false);
+            ;
         };
 
         useEffect(() => {
@@ -30,29 +33,36 @@ export default function Lesson10(){
         fetchCatFacts()
     }        
 
+    
+
     const handleDeleteAllData = () => {
         setFacts([])
     }
 
     return(
-        <div className='lesson-container'>
-            <h3>Cat Fact</h3>
-            
-            <div className={styles.buttons}>
-            <MyButton name={'GET MORE INFO'} onClick={handleGetMoreInfo}/>
-            <MyButton 
-                id={`${(catFacts.length <= 0) ? styles.invisible: styles.delete}`} 
-                name={'DELETE ALL DATA'} 
+            <div className='lesson-container'>
+        <h3>Cat Facts</h3>
+        <div className={styles.buttons}>
+            <MyButton name={'GET MORE INFO'} onClick={handleGetMoreInfo} />
+            {catFacts.length > 0 && (
+            <MyButton
+                id={styles.delete}
+                name={'DELETE ALL DATA'}
                 onClick={handleDeleteAllData}
             />
-            </div>
+            )}
+        </div>
+        {isLoading && <Spinner />}
+        {catFacts.length > 0 && (
             <div className={styles.catFactContainer}>
             <ol>
-                {catFacts.map(el=> <li>{el.fact}</li>)}
+                {catFacts.map((el, index) => (
+                <li key={index}>{el.fact}</li>
+                ))}
             </ol>
-            <Spinner />
             </div>
-
+        )}
+        {/* <Spinner/> */}
         </div>
     )
 }
