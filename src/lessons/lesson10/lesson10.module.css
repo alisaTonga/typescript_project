@@ -1,0 +1,14 @@
+.catFactContainer{
+    font-weight: 600;
+    font-size: 30px;
+    max-height: 700px;
+    overflow-y: auto; 
+    padding: 20px; 
+    margin-top: 20px;
+}
+.buttons{
+    display: flex;
+}
+#invisible{
+    display: none;
+}
