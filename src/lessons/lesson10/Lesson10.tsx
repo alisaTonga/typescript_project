@@ -40,7 +40,7 @@ export default function Lesson10(){
     }
 
     return(
-            <div className='lesson-container'>
+        <div className='lesson-container'>
         <h3>Cat Facts</h3>
         <div className={styles.buttons}>
             <MyButton name={'GET MORE INFO'} onClick={handleGetMoreInfo} />

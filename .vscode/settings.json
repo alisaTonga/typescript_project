@@ -18,5 +18,9 @@
         "titleBar.inactiveBackground": "#add8e699",
         "titleBar.inactiveForeground": "#15202b99"
     },
-    "peacock.color": "lightblue"
+    "peacock.color": "lightblue",
+    "cSpell.words": [
+        "formik",
+        "Formik"
+    ]
 }
