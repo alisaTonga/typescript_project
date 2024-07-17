@@ -32,6 +32,7 @@ export default function FormikLoginForm() {
       onChange={formik.handleChange} type="text" placeholder='email'/>
 
       <button type="submit">send</button>
+      
       </form>
   )
 }

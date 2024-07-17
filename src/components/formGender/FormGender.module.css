@@ -9,3 +9,9 @@
     background-color: rgb(91, 72, 199);
     border: none;
 }
+.invisible{
+    display: none;
+}
+.visible{
+    display: flex;
+}
