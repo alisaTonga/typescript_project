@@ -15,3 +15,9 @@
 .visible{
     display: flex;
 }
+.errors{
+    color: red;
+    position: absolute;
+    display: flex;
+    align-self: center;
+}
