@@ -1,13 +1,20 @@
 .loginForm{
     display: flex;
     flex-direction: column;
+    position: relative;
+
+}
+.loginForm h4{
+    text-align: center;
 }
 .loginForm > input{
-    margin-bottom: 3px;
+    margin-bottom: 10px;
 }
 .loginForm > button{
     background-color: rgb(91, 72, 199);
     border: none;
+    margin-bottom: 20px;
+    color: white;
 }
 .invisible{
     display: none;
@@ -18,6 +25,12 @@
 .errors{
     color: red;
     position: absolute;
-    display: flex;
-    align-self: center;
+
+    justify-content: left;
+
+    /* top: 200px;
+    right: 520px; */
+
+    font-weight: bold;
+    font-size: 20px;
 }

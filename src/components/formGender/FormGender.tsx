@@ -43,7 +43,7 @@ export default function FormGender() {
         setIsLoading(false);
         }})
     return (
-        <>
+        <div className={styles.form}>
         <form onSubmit={formik.handleSubmit} className={styles.loginForm}>
         <h4>Enter name: </h4>
         <input name='name' value={formik.values.name} onChange={formik.handleChange} type="text" placeholder='Name' />
@@ -53,7 +53,7 @@ export default function FormGender() {
             {isLoading ? <Spinner /> : inputName} <br />Gender: {isLoading ? <Spinner /> : gender}</span>
 
         </form>
-        <span className={styles.errors}>{formik.errors.name}</span>
-        </>
+        <span className= {styles.errors} >{formik.errors.name}</span>
+        </div>
     )
 }
