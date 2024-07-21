@@ -26,3 +26,8 @@ code {
 .lesson-container > p {
   text-align: center;
 }
+header > a {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+}
