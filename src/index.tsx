@@ -9,6 +9,8 @@ import LoginForm from './components/loginForm/LoginForm';
 import RobotForm from './components/robotForm/RobotForm';
 import Feedback from './components/feedback/Feedback';
 import Homepage from './components/HomePage/Homepage';
+import ProductCard from './components/Shop/ProductCard';
+import Shop from './components/Shop/Shop';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -24,6 +26,9 @@ root.render(
         <Route path='/' element={<Homepage/>}/>
         <Route path='/feedback' element={<Feedback/>}/>
         <Route path='/random-user' element={<Consultation4/>}/>
+        <Route path='/my-shop' element={<Shop/>}/>
+
+        <Route path='*' element={<h1>Error 404</h1>}/>
 
       </Route>
     </Routes>
