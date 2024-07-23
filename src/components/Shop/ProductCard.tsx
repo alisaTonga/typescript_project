@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import styles from './shop.module.css'
 import { number } from 'yup'
+import MyButton from '../myButton/myButton'
+import { Link } from 'react-router-dom'
 
-interface IProductCard{
+export interface IProductCard{
     id: number,
     title: string,
     price: number,
@@ -26,6 +28,7 @@ export default function ProductCard(
         { rate, count }, }:IProductCard){    
         
     return (
+        
         <div key={id} className={styles.card}>
         <h5>{title.length > 20 ? title.substring(0,20) + '...' : 
         title}</h5>
@@ -41,7 +44,12 @@ export default function ProductCard(
         <div className={styles.rateBlock}>Count: {count}</div>
         </div>
 
+        <div>
+            <Link to={String(id)}>
+                <MyButton name='product info'/>    
+            </Link>
 
+        </div>
     </div>
 
 )}

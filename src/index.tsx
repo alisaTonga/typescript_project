@@ -11,6 +11,7 @@ import Feedback from './components/feedback/Feedback';
 import Homepage from './components/HomePage/Homepage';
 import ProductCard from './components/Shop/ProductCard';
 import Shop from './components/Shop/Shop';
+import ProductPage from './components/productPage/ProductPage';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -27,6 +28,7 @@ root.render(
         <Route path='/feedback' element={<Feedback/>}/>
         <Route path='/random-user' element={<Consultation4/>}/>
         <Route path='/my-shop' element={<Shop/>}/>
+        <Route path='/my-shop/:id' element={<ProductPage/>}/>
 
         <Route path='*' element={<h1>Error 404</h1>}/>
 
