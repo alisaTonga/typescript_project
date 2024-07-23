@@ -35,12 +35,20 @@ export default function ProductPage() {
   return (
     <div>
       {loading && <Loader/>}
-      <h3>{product.title}</h3>
-      <p>{product.description}{id}</p>
-      <img src={product.image} width={200} alt={product.title} />
-      <p>{product.price} €</p>
+      <h3 className={styles.title}>{product.title}</h3>
+      <div className={styles.mainContainer}>
+          <div className={styles.photo}>
+            <img src={product.image} width={200} alt={product.title} />
+          </div>
+          <div className={styles.infoContainer}>
+            <p className={styles.decription}>{product.description}{id}</p>
+            <p>{product.price} €</p>
+            <Link to={String('/my-shop')}><MyButton name='back to shop'/> </Link>
+
+          </div>
+      </div>
+
       <div>
-      <Link to={String('/my-shop')}><MyButton name='back to shop'/> </Link>
       </div>
       </div>
       )
