@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import styles from './shop.module.css'
 import ProductCard from './ProductCard';
 import Loader from '../loader/Loader';
+import { number } from 'yup';
 
     export interface IProduct{
         id: number,
@@ -20,7 +21,7 @@ import Loader from '../loader/Loader';
 export default function Shop() {
     const [products, setProducts] =useState<IProduct[]>([]);
     const [loading, setLoading] =useState<boolean>(false);
-    const [limit, setLimit] = useState<number>(5)
+    const [limit, setLimit] = useState<number>(20);
 
         const getFakeStore = async (limit: number) =>{
             setLoading(true)
@@ -30,9 +31,12 @@ export default function Shop() {
             setLoading(false)
         } 
         
-        const handleLimitChange = (value: string) => {
-            setLimit(Number(value))
-            };
+        const handleLimitChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+            const newLimit = parseInt(event.target.value, 10);
+            if (!isNaN(newLimit) && newLimit > 0 && newLimit <= 20) {
+                setLimit(newLimit);
+            }
+        };
         
         useEffect(() => {
             getFakeStore(limit);
@@ -46,7 +50,7 @@ export default function Shop() {
         <div className={styles.limit}>
         <label>Number of items to display</label>
         <br />
-        <input type="number" min="1" max="20" value={limit} onClick={handleLimitChange} placeholder='' />
+        <input type="number" min="1" max="20" value={limit} onChange={handleLimitChange}  /> 
         </div>
         <div className={styles.products}>
 
