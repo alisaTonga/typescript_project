@@ -13,6 +13,7 @@ import Shop from './components/Shop/Shop';
 import ProductPage from './components/productPage/ProductPage';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
+import Login from './components/login/Login';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -31,6 +32,7 @@ root.render(
         <Route path='/random-user' element={<Consultation4/>}/>
         <Route path='/my-shop' element={<Shop/>}/>
         <Route path='/my-shop/:id' element={<ProductPage/>}/>
+        <Route path='/login' element={<Login/>}/>
 
         <Route path='*' element={<h1>Error 404</h1>}/>
 

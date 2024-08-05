@@ -1,0 +1,17 @@
+.loginForm{
+    display: flex;
+    flex-direction: column;
+}
+.loginForm > input{
+    margin-bottom: 3px;
+}
+.loginForm > button{
+    background-color: rgb(127, 187, 197);
+    border: none;
+}
+
+.errors{
+    color: red;
+    position: absolute;
+    
+}
