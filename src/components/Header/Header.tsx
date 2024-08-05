@@ -3,6 +3,7 @@ import React from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 import { logoutUser } from '../../features/auth/authSlice'
+import { clearProducts } from '../../features/products/productSlice'
 
 export default function Header() {
     const dispatch = useAppDispatch()
@@ -11,6 +12,7 @@ export default function Header() {
     const handleLogout = ()=>{
         localStorage.removeItem("userToken")
         dispatch(logoutUser())
+        dispatch(clearProducts())
     }
     const { user} = useAppSelector(state=> state.user)
     interface ILink{
