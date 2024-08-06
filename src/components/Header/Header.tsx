@@ -24,10 +24,9 @@ export default function Header() {
         {path: '/robot-form', label: 'Robot form'},
         {path: '/gender-form', label: 'Gender form'},
         {path: '/my-form', label: 'Login Form'},
-        {path: '/star-wars-gallery', label: 'Star wars gallery'},
+        {path: '/', label: 'Star wars gallery'},
         {path: '/feedback', label: 'Feedback'},
         {path: '/random-user', label: 'Random user'},
-        {path: '/', label: 'Homepage'},
         {path: '/my-shop', label: 'Shop'}
     ]
     return (

@@ -14,6 +14,7 @@ import ProductPage from './components/productPage/ProductPage';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import Login from './components/login/Login';
+import ProtectedRoute from './components/protectedRoute/ProtectedRoute';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -23,16 +24,15 @@ root.render(
   <HashRouter>
     <Routes>
       <Route path='/' element={<Layout />} >
-        <Route path='/star-wars-gallery' element={<StarWarsGallery/>} />
-        <Route path='/gender-form' element={<FormGender/>}/>
-        <Route path='/my-form' element={<LoginForm/>}/>
-        <Route path='/robot-form' element={<RobotForm/>}/>
-        <Route path='/' element={<Homepage/>}/>
-        <Route path='/feedback' element={<Feedback/>}/>
-        <Route path='/random-user' element={<Consultation4/>}/>
-        <Route path='/my-shop' element={<Shop/>}/>
-        <Route path='/my-shop/:id' element={<ProductPage/>}/>
-        <Route path='/login' element={<Login/>}/>
+        <Route path='/' element={<ProtectedRoute outlet={<StarWarsGallery/>}/>} />
+        <Route path='/gender-form' element={<ProtectedRoute outlet={<FormGender/>}/>} />
+        <Route path='/my-form' element={<ProtectedRoute outlet={<LoginForm/>}/>} />
+        <Route path='/robot-form' element={<ProtectedRoute outlet={<RobotForm/>}/>} />
+        <Route path='/feedback' element={<ProtectedRoute outlet={<Feedback/>}/>} />
+        <Route path='/random-user' element={<ProtectedRoute outlet={<Consultation4/>}/>} />
+        <Route path='/my-shop' element={<ProtectedRoute outlet={<Shop/>}/>} />
+        <Route path='/my-shop/:id' element={<ProtectedRoute outlet={<ProductPage/>}/>} />
+        <Route path='/login' element={<Login/>} />
 
         <Route path='*' element={<h1>Error 404</h1>}/>
 

@@ -19,9 +19,11 @@ export default function Login() {
             password: 'emilyspass',
         } as ILoginValues,
         onSubmit: (values: ILoginValues, {resetForm})=> {
-            dispatch(loginUser(values))
-            navigate('/my-shop')
-            // resetForm();
+            dispatch(loginUser(values)).then(()=>{
+            navigate('/')
+            //resetForm();
+            })
+
         }
         })
     return (
